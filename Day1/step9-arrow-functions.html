@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        
+        
+        const cart = {
+            getCostprice: function () {
+                return 100;                
+            },
+            getsell: function(){
+                let calP = ()=>{
+                    return this.getCostprice()*0.2;  //this scope has problem
+                }
+                return this.getCostprice()+calP();
+            }
+        }
+        let adder = num1 => num1+num1;
+        
+        console.log(adder(6));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
